@@ -5,4 +5,5 @@ Usuario comun: Email/usuario: usuario@gmail.com Password : Usuario123
 
 En caso de por algun motivo los mails no funcionen, se pueden registrar(el rol por defecto siempre sera usuario)
 
-Herramienta para orginzar el proyecto: https://trello.com/b/BhqwBW3Y/proyecto
+# Trello
+ https://trello.com/b/BhqwBW3Y/proyecto
