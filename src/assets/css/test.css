@@ -1,0 +1,24 @@
+.titulo{
+    text-align: center;
+    margin: 5px;
+    font-weight: bold;
+}
+
+.cerrarInfo{
+    background-color:green;
+    border-color:greenyellow;
+}
+
+.cerrarInfo:hover{
+    background-color:rgb(80, 151, 80);
+    border-color:rgb(162, 209, 90);
+}
+
+.bg-gradient-secondary{
+    background-color: #858796;
+    background-image: linear-gradient(180deg,#282931 10%,#282931 100%);
+}
+
+.bg-white{
+    background-color:#282931
+}

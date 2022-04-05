@@ -15,6 +15,14 @@ function LastMovieInDb() {
           });
       });
   }, []);
+  const [moreDetail, setDetail] = useState(false);
+
+  const abrir = () => {
+    setDetail(true);
+  };
+  const cerrar = () => {
+    setDetail(false);
+  };
   return (
     <div className="col-lg-6 mb-4">
       <div className="card shadow mb-4">
@@ -33,9 +41,55 @@ function LastMovieInDb() {
             />
           </div>
           <p>{product.description}</p>
-          <a className="btn btn-danger" target="_blank" rel="nofollow" href="/">
-            View movie detail
-          </a>
+
+          {moreDetail ? (
+            <div>
+              <table style={{ width: 110 + "%" }}>
+                <thead></thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <strong>Estado: {product.state}</strong>
+                    </td>
+                    <td>
+                      <strong>Stock: {product.stock_max}</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Editorial: {product.editorial}</strong>
+                    </td>
+                    <td>
+                      <strong>Tamaño: {product.size}</strong>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <strong>Categoria: {product.categories}</strong>
+                    </td>
+
+                    <td>
+                      <strong>Precio: {product.price}</strong>
+                    </td>
+                  </tr>
+                </tbody>
+                <tfoot></tfoot>
+              </table>
+              <br></br>
+              <br></br>
+              <nav
+                onClick={cerrar}
+                className="btn btn-danger cerrarInfo"
+                rel="nofollow"
+              >
+                Cerrar
+              </nav>
+            </div>
+          ) : (
+            <nav onClick={abrir} className="btn btn-danger" rel="nofollow">
+              Mas información
+            </nav>
+          )}
         </div>
       </div>
     </div>
