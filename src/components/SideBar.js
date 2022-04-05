@@ -1,10 +1,11 @@
 import React from "react";
-import image from "../assets/images/logo-DH.png";
+import image from "../assets/images/logo-BookBuster.png";
 import ContentWrapper from "./ContentWrapper";
 import GenresInDb from "./GenresInDb";
 import LastMovieInDb from "./LastProductInDb";
-import ContentRowMovies from "./ContentRowMovies";
 import NotFound from "./NotFound";
+import Chart from "./Chart";
+import ChartUser from "./ChartUsers";
 
 import { Link, Route, Switch } from "react-router-dom";
 
@@ -47,7 +48,7 @@ function SideBar() {
         <li className="nav-item">
           <Link className="nav-link" to="/GenresInDb">
             <i className="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
+            <span>Productos</span>
           </Link>
         </li>
 
@@ -55,15 +56,21 @@ function SideBar() {
         <li className="nav-item">
           <Link className="nav-link" to="/LastProductInDb">
             <i className="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span>
+            <span>Ultimo Producto</span>
           </Link>
         </li>
 
         {/*<!-- Nav Item - Tables -->*/}
         <li className="nav-item nav-link">
-          <Link className="nav-link" to="/ContentRowMovies">
+          <Link className="nav-link" to="/Chart">
             <i className="fas fa-fw fa-table"></i>
-            <span>Tables</span>
+            <span>Tabla de Productos</span>
+          </Link>
+        </li>
+        <li className="nav-item nav-link">
+          <Link className="nav-link" to="/ChartUsers">
+            <i className="fas fa-fw fa-table"></i>
+            <span>Tabla de Usuarios</span>
           </Link>
         </li>
 
@@ -98,8 +105,11 @@ function SideBar() {
         <Route path="/LastProductInDb">
           <LastMovieInDb />
         </Route>
-        <Route path="/ContentRowMovies">
-          <ContentRowMovies />
+        <Route path="/Chart">
+          <Chart />
+        </Route>
+        <Route path="/ChartUsers">
+          <ChartUser />
         </Route>
         <Route component={NotFound} />
       </Switch>

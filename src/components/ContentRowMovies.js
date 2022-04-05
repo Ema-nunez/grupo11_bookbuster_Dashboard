@@ -32,7 +32,7 @@ function ContentRowMovies() {
       });
   }, []);
   let moviesInDB = {
-    title: "Movies in Data Base",
+    title: "Productos en base de datos",
     color: "primary",
     cuantity: products.count,
     icon: "fa-clipboard-list",
@@ -41,7 +41,7 @@ function ContentRowMovies() {
   /* <!-- Total awards --> */
 
   let totalAwards = {
-    title: " Total awards",
+    title: "Categorias",
     color: "success",
     cuantity: categories.length,
     icon: "fa-award",
@@ -50,7 +50,7 @@ function ContentRowMovies() {
   /* <!-- Actors quantity --> */
 
   let actorsQuantity = {
-    title: "Actors quantity",
+    title: "Usuarios Registrados",
     color: "warning",
     cuantity: users,
     icon: "fa-user-check",
